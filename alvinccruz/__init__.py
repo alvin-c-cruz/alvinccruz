@@ -1,10 +1,11 @@
 from flask import Flask
 
 from . import home_page
-
+from . import book_shelf
 
 BP_GROUPS = [
     home_page,
+    book_shelf
 ]
 
 

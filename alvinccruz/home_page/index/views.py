@@ -16,7 +16,7 @@ def navigation():
     if "nav" not in g:
         g.nav = {}
 
-    g.nav["Home"] = Navigation(
+    g.nav["index"] = Navigation(
         label="Home",
         route=url_for("index.home")
     )

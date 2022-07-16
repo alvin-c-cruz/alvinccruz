@@ -7,23 +7,19 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
 
-            {% for _, nav in g.nav.items() %}
-                {% if nav.label != "landing_page" %}
-                <div class="navbar-nav">
-                    <a class="nav-link text-white" href="{{ nav.route }}">{{ nav.label }}</a>
-                </div>
-                {% endif %}
-            {% endfor %}
+            <div class="navbar-nav">
+                <a class="nav-link text-white" href="{{ g.nav['index'].route }}">{{ g.nav['index'].label }}</a>
+            </div>
 
             <div class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button"
+                <a class="nav-link dropdown-toggle text-white" href="#" role="button"
                    data-bs-toggle="dropdown" aria-expanded="false">
-                    Items
+                    Studies
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <li><a class="dropdown-item" href="#">Item 1</a></li>
-                    <li><a class="dropdown-item" href="#">Item 2</a></li>
-                    <li><a class="dropdown-item" href="#">Item 3</a></li>
+                {% for _, nav in g.nav["book_shelf"].items() %}
+                    <li><a class="dropdown-item" href="{{ nav.route }}">{{ nav.label }}</a></li>
+                {% endfor %}
                 </ul>
             </div>
 
@@ -50,3 +46,5 @@
 
     </div>
 </nav>
+
+<nav>

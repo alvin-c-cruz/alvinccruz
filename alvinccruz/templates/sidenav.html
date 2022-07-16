@@ -1,0 +1,8 @@
+<div class="sidenav bg-dark col-1">
+    {% with nav = g.nav["book_shelf"][shelf] %}
+        <a href="{{ nav.route }}">{{ nav.label }}</a>
+        {% for sub_nav in nav.sub_nav %}
+        <a href="{{ sub_nav.route }}">{{ sub_nav.label }}</a>
+        {% endfor %}
+    {% endwith %}
+</div>

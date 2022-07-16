@@ -1,5 +1,4 @@
-from dataclasses import dataclass
-from typing import List
+from dataclasses import dataclass, field
 
 
 @dataclass
@@ -7,4 +6,4 @@ class Navigation:
     label: str
     route: str
 
-    sub_nav: List = list
+    sub_nav: list = field(default_factory=lambda: [])
