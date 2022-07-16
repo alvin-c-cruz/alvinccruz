@@ -1,19 +1,6 @@
-from flask import Flask, render_template, request
-from werkzeug.utils import secure_filename
+from flask_app import app
 
-
-app = Flask(__name__)
-app.config["SECRET_KEY"] = "asecret"
-
-
-@app.route("/", methods=["GET", "POST"])
-def index():
-    if request.method == "POST":
-        file = request.files["file"]
-        file.save(secure_filename(file.filename))
-        return 'file uploaded successfully'
-        
-    return render_template("index.html")
-
-
-app.run()
+app.run(debug=True)
+app.config["DEBUG"] = True
+app.config["FLASKENV"] = "development"
+app.run(port=5000)

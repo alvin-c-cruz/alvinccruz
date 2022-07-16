@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{{ g.nav['landing_page'].route }}">Anonymous</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            {% for _, nav in g.nav.items() %}
+                {% if nav.label != "landing_page" %}
+                <div class="navbar-nav">
+                    <a class="nav-link text-white" href="{{ nav.route }}">{{ nav.label }}</a>
+                </div>
+                {% endif %}
+            {% endfor %}
+
+            <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button"
+                   data-bs-toggle="dropdown" aria-expanded="false">
+                    Items
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">Item 1</a></li>
+                    <li><a class="dropdown-item" href="#">Item 2</a></li>
+                    <li><a class="dropdown-item" href="#">Item 3</a></li>
+                </ul>
+            </div>
+
+            <div class="navbar-nav justify-content-end">
+                <a class="nav-link text-white" href="#">About</a>
+            </div>
+
+            <div class="navbar-nav justify-content-end">
+                <a class="nav-link text-white" href="#">Contact</a>
+            </div>
+
+            <div class="navbar-nav justify-content-end">
+                <a class="nav-link text-white" href="#">Log Out</a>
+            </div>
+
+            <div class="navbar-nav justify-content-end">
+                <a class="nav-link text-white" href="#">Register</a>
+            </div>
+
+            <div class="navbar-nav justify-content-end">
+                <a class="nav-link text-white" href="#">Log In</a>
+            </div>
+        </div>
+
+    </div>
+</nav>
