@@ -1,0 +1,42 @@
+body {
+    background-color: #EAF6F6;
+    }
+
+hr {
+    margin: 0 auto;
+    border-style: dotted none none none;
+    width: 20%;
+    border-color: lightgrey;
+    border-width: 5px;
+    }
+
+h1, h3 {
+    color: #66BFBF;
+}
+
+p {
+    margin: 5px, 0;
+}
+
+#profile-img {
+    border-radius: 50%;
+}
+
+#card {
+    margin: 50px;
+    text-align: center;
+}
+
+.certificate_img {
+    background-color: #66BFBF;
+    border-radius: 5%;
+}
+
+.contacts {
+    margin-top: auto;
+    margin-bottom: 0;
+}
+
+.align-left {
+    text-align: left;
+}

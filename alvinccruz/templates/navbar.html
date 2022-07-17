@@ -6,11 +6,11 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-
+            {% if current_user.is_authenticated %}
             <div class="navbar-nav">
                 <a class="nav-link text-white" href="{{ g.nav['index'].route }}">{{ g.nav['index'].label }}</a>
             </div>
-
+            {% endif %}
             <div class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-white" href="#" role="button"
                    data-bs-toggle="dropdown" aria-expanded="false">
@@ -30,11 +30,11 @@
             <div class="navbar-nav justify-content-end">
                 <a class="nav-link text-white" href="#">Contact</a>
             </div>
-
+            {% if current_user.is_authenticated %}
             <div class="navbar-nav justify-content-end">
                 <a class="nav-link text-white" href="#">Log Out</a>
             </div>
-
+            {% else %}
             <div class="navbar-nav justify-content-end">
                 <a class="nav-link text-white" href="#">Register</a>
             </div>
@@ -42,6 +42,7 @@
             <div class="navbar-nav justify-content-end">
                 <a class="nav-link text-white" href="#">Log In</a>
             </div>
+            {% endif %}
         </div>
 
     </div>

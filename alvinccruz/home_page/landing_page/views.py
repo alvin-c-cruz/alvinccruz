@@ -2,7 +2,7 @@ from flask import Blueprint, render_template, url_for, g
 
 from alvinccruz.nav_object import Navigation
 
-bp = Blueprint("home_page", __name__, template_folder="pages")
+bp = Blueprint("landing_page", __name__, template_folder="pages")
 
 
 @bp.route("/")
@@ -17,7 +17,7 @@ def navigation():
 
     g.nav["landing_page"] = Navigation(
         label="",
-        route=url_for("home_page.home")
+        route=url_for("landing_page.home")
     )
 
 

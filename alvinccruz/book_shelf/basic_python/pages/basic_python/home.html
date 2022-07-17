@@ -1,15 +1,29 @@
 {% extends "book_shelf.html" %}
 
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='blockquote.css') }}">
+{% endblock %}
+
 {% block title %}Basic Python{% endblock %}
 
 {% block content %}
 <h1>What is Python?</h1>
 <blockquote>
-    Python is an interpreted, object-oriented, high-level programming language with dynamic semantics.
+    <p>Python is an interpreted, object-oriented, high-level programming language with dynamic semantics.
     Its high-level built in data structures, combined with dynamic typing and dynamic binding, make it very attractive
     for Rapid Application Development, as well as for use as a scripting or glue language to connect existing
     components together.
     Python's simple, easy to learn syntax emphasizes readability and therefore reduces the cost of program maintenance.
-    <cite class="title">— <a href="https://www.python.org/doc/essays/blurb/">www.python.org</a></cite>
+    </p>
+    <cite class="title">— <a href="https://www.python.org/doc/essays/blurb/" target="_blank">www.python.org</a></cite>
 </blockquote>
+
+<h2>What is Python for me?</h2>
+<p>
+    I use python for database management and task automation.
+    Being an accountant by profession, a lot of my tasks relies on spreadsheets.
+    I need to learn techniques to manage both time and accuracy of information for financial reporting.
+    Eventually I learned python which makes my job easier.
+</p>
+
 {% endblock %}

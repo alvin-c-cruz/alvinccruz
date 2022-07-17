@@ -15,9 +15,9 @@ def home():
     return render_template("basic_python/home.html", **CONTEXT)
 
 
-@bp.route("/history")
-def history():
-    return render_template("basic_python/history.html", **CONTEXT)
+@bp.route("/syntax")
+def syntax():
+    return render_template("basic_python/syntax.html", **CONTEXT)
 
 
 @bp.before_app_request
@@ -39,8 +39,8 @@ def navs():
 
     nav.sub_nav.append(
         Navigation(
-            label="History",
-            route=url_for("basic_python.history")
+            label="Syntax",
+            route=url_for("basic_python.syntax")
         )
     )
 
